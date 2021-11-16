@@ -1,7 +1,8 @@
 ---
-- name: Hello World!
-  hosts: localhost
+- name: Hello World
+  hosts: all
   tasks:
-  - name: Hello World!
+  - name: Hello World
     shell: echo "I am Batman"
-  
+    register: result
+    ignore_errors: yes
